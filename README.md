@@ -1,9 +1,9 @@
-LogHawk 🦅
+Loghawk 🦅
 Automated Log Monitoring for Security Teams
 
 Python License
 
-🔍 What is LogHawk?
+🔍 What is Loghawk?
 LogHawk is a lightweight, open-source tool that automatically scans log files for security threats like:
 
 Failed login attempts (SSH, web apps)
@@ -37,15 +37,15 @@ sudo access (for reading system logs)
 1. Install Dependencies
 bash
 sudo apt update && sudo apt install -y python3 python3-pip git
-2. Download LogHawk
+2. Download Loghawk
 bash
-git clone https://github.com/yourusername/LogHawk.git
+git clone [https://github.com/saurabhalang/Loghawk]
 cd LogHawk
 pip3 install -r requirements.txt
 3. Verify Installation
 bash
 python3 src/loghawk.py --version
-✅ Expected output: LogHawk v1.0
+✅ Expected output: Loghawk v1.0
 
 🛠 How to Use
 Basic Scan
@@ -59,11 +59,11 @@ bash
 sudo python3 src/loghawk.py -l /var/log/syslog -d  # Runs as a daemon
 📋 Example Output
 plaintext
-[2023-11-16 14:30:01] 🚨 SSH Brute Force (Severity: HIGH)  
-Nov 16 14:30:01 server sshd[1234]: Failed password for root from 192.168.1.100  
+[2025-04-29 14:30:01] 🚨 SSH Brute Force (Severity: HIGH)  
+Apr 04 14:30:01 server sshd[1234]: Failed password for root from 192.168.1.100  
 
-[2023-11-16 14:30:02] 🚨 Suspicious Cron Job (Severity: CRITICAL)  
-Nov 16 14:30:02 server CRON[5678]: (root) CMD (curl http://malicious.site)  
+[2025-04-29 14:30:02] 🚨 Suspicious Cron Job (Severity: CRITICAL)  
+Apr 04 14:30:02 server CRON[5678]: (root) CMD (curl http://malicious.site)  
 Alerts are also saved to: /var/log/loghawk_alerts.log
 
 ⏰ Automate with Cron
