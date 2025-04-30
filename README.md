@@ -67,7 +67,7 @@ Apr 04 14:30:02 server CRON[5678]: (root) CMD (curl http://malicious.site)
 Alerts are also saved to: /var/log/loghawk_alerts.log
 
 ⏰ Automate with Cron
-To run LogHawk every 10 minutes:
+To run Loghawk every 10 minutes:
 
 Edit crontab:
 
@@ -76,7 +76,7 @@ sudo crontab -e
 Add this line:
 
 bash
-*/10 * * * * /usr/bin/python3 /path/to/LogHawk/src/loghawk.py -l /var/log/auth.log >> /var/log/loghawk.log 2>&1
+*/10 * * * * /usr/bin/python3 /path/to/Loghawk/src/loghawk.py -l /var/log/auth.log >> /var/log/loghawk.log 2>&1
 🛡 Customize Detection Rules
 Edit configs/default_rules.yaml:
 
